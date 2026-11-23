@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JARVIS Community — a customizable desktop AI assistant for your PC.">
+  <title>JARVIS Community | Your desktop assistant</title>
+  <style>
+    :root {
+      --bg: #070b12;
+      --panel: rgba(16, 26, 40, .78);
+      --line: rgba(103, 205, 255, .18);
+      --cyan: #62dcff;
+      --blue: #438cff;
+      --text: #eef7ff;
+      --muted: #9db0c4;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text); background:
+        radial-gradient(ellipse at 50% -10%, rgba(33, 113, 178, .25), transparent 48%),
+        radial-gradient(ellipse at 90% 55%, rgba(24, 91, 133, .12), transparent 38%),
+        var(--bg);
+      font-family: Inter, Segoe UI, Arial, sans-serif; line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin: auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:24px 0; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:2px; }
+    .mark { width:36px; height:36px; display:grid; place-items:center; border:1px solid var(--cyan); border-radius:50%; color:var(--cyan); box-shadow:0 0 22px #38bfff55; }
+    nav { display:flex; gap:24px; color:var(--muted); font-size:14px; }
+    nav a:hover { color:var(--cyan); }
+    .hero { text-align:center; padding:92px 0 76px; }
+    .eyebrow { color:var(--cyan); letter-spacing:3px; font-size:12px; font-weight:700; text-transform:uppercase; }
+    h1 { font-size:clamp(42px, 8vw, 82px); line-height:1.03; margin:18px 0; letter-spacing:-3px; }
+    h1 span { color:var(--cyan); text-shadow:0 0 35px #40caff44; }
+    .lead { max-width:650px; margin:0 auto; color:var(--muted); font-size:18px; }
+    .actions { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:32px; }
+    .btn { padding:13px 22px; border-radius:8px; font-weight:700; border:1px solid var(--line); transition:.2s; }
+    .primary { color:#03111b; background:linear-gradient(110deg,var(--cyan),#8ab9ff); border:0; box-shadow:0 8px 30px #36baff2b; }
+    .btn:hover { transform:translateY(-2px); }
+    .secondary { background:rgba(255,255,255,.03); }
+    .console { max-width:760px; margin:44px auto 0; padding:22px; text-align:left; border:1px solid var(--line); border-radius:14px; background:linear-gradient(145deg,rgba(19,38,58,.88),rgba(7,14,24,.9)); box-shadow:0 20px 70px #0008; }
+    .console-top { display:flex; gap:7px; margin-bottom:18px; }
+    .dot { width:8px; height:8px; border-radius:50%; background:#5bdcff; opacity:.8; }
+    .console p { margin:7px 0; color:#b9d1e5; font:14px Consolas,monospace; }
+    .console b { color:var(--cyan); font-weight:500; }
+    section { padding:62px 0; }
+    .section-title { text-align:center; font-size:32px; margin:0 0 10px; }
+    .section-sub { text-align:center; color:var(--muted); margin:0 auto 32px; max-width:620px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:24px; }
+    .card .symbol { font-size:23px; color:var(--cyan); }
+    .card h3 { margin:12px 0 6px; }
+    .card p { margin:0; color:var(--muted); font-size:14px; }
+    .download { text-align:center; background:linear-gradient(145deg,rgba(16,40,61,.72),rgba(8,15,25,.8)); border:1px solid var(--line); border-radius:16px; padding:42px 22px; }
+    .download p { color:var(--muted); }
+    .notice { font-size:13px; max-width:650px; margin:18px auto 0; color:#91a9bd; }
+    footer { border-top:1px solid var(--line); padding:25px 0; color:var(--muted); font-size:13px; }
+    footer .wrap { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    @media(max-width:760px) { nav { gap:12px; font-size:12px; } .grid { grid-template-columns:1fr; } .hero { padding-top:65px; } }
+    @media(max-width:430px) { header { align-items:flex-start; flex-direction:column; gap:16px; } nav { flex-wrap:wrap; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="#"><span class="mark">J</span><span>JARVIS COMMUNITY</span></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#requirements">Requirements</a>
+      <a href="#download">Download</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero wrap">
+      <div class="eyebrow">Your PC. Your assistant.</div>
+      <h1>Meet <span>JARVIS.</span></h1>
+      <p class="lead">A customizable desktop AI assistant designed to help you interact with your PC using chat and voice.</p>
+      <div class="actions">
+        <a class="btn primary" href="#download">Get JARVIS Community</a>
+        <a class="btn secondary" href="#features">Explore features</a>
+      </div>
+      <div class="console" aria-label="Decorative assistant preview">
+        <div class="console-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+        <p><b>JARVIS //</b> Community Edition</p>
+        <p><b>STATUS:</b> Ready</p>
+        <p><b>INPUT:</b> Voice · Chat · Screen context</p>
+        <p><b>MISSION:</b> Make your desktop workflow easier.</p>
+      </div>
+    </div>
+
+    <section id="features" class="wrap">
+      <h2 class="section-title">Built for your desktop</h2>
+      <p class="section-sub">A simple starting point for an AI assistant you can personalize.</p>
+      <div class="grid">
+        <article class="card"><div class="symbol">◉</div><h3>Chat with AI</h3><p>Talk to your assistant through a desktop chat interface powered by a locally running Ollama service.</p></article>
+        <article class="card"><div class="symbol">♫</div><h3>Voice controls</h3><p>Use the keyboard shortcut to toggle listening and try supported voice commands.</p></article>
+        <article class="card"><div class="symbol">▣</div><h3>Screen awareness</h3><p>Capture your screen and ask the configured vision model for help understanding what is displayed.</p></article>
+      </div>
+    </section>
+
+    <section id="requirements" class="wrap">
+      <h2 class="section-title">Before you install</h2>
+      <p class="section-sub">JARVIS Community uses Ollama for its AI features. Ollama and the required models are installed separately.</p>
+      <div class="grid">
+        <article class="card"><h3>1. Windows PC</h3><p>Install the JARVIS Community setup file on a compatible Windows computer.</p></article>
+        <article class="card"><h3>2. Ollama</h3><p>Install Ollama and make sure its local service is running before opening JARVIS.</p></article>
+        <article class="card"><h3>3. AI models</h3><p>Download the text and vision models configured for your version of JARVIS.</p></article>
+      </div>
+    </section>
+
+    <section id="download" class="wrap">
+      <div class="download">
+        <div class="eyebrow">Community edition</div>
+        <h2 class="section-title">Ready to try JARVIS?</h2>
+        <p>The Windows installer will be linked here when your release is published.</p>
+        <!-- Replace # with your published installer URL before going live. -->
+        <a class="btn primary" href="#" aria-label="Download link not configured yet">Download coming soon</a>
+        <p class="notice">This is a community project. Check the release notes and setup instructions before installing. Ollama and AI models are not included in the installer.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap"><span>© 2026 JARVIS Community</span><span>Made for curious minds.</span></div>
+  </footer>
+</body>
+</html>
